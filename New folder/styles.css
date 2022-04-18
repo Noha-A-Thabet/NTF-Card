@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  --main-bg-color: hsl(217, 54%, 11%);
+  --main-card-color: hsl(216, 50%, 16%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-image-size: 18em;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+.card-container {
+  background-color: var(--main-card-color);
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.card-image {
+  position: relative;
+  background-color: cyan;
+  border-radius: 0.5em;
+}
+
+.card-image > img {
+  margin: auto;
+  border-radius: 0.5em;
+  width: var(--main-image-size);
+  height: 100%;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.middle > img {
+  height: 2em;
+}
+
+.card-image:hover .image {
+  opacity: 0.3;
+}
+
+.card-image:hover .middle {
+  opacity: 1;
+}
+
+.card-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 1em 0;
+  text-decoration: none;
+}
+
+.card-title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card-description {
+  color: var(--soft-blue);
+  max-width: var(--main-image-size);
+}
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5em;
+}
+
+.card-details > img {
+  margin: auto;
+  max-width: var(--main-image-size);
+}
+
+.card-balance {
+  display: flex;
+  flex-direction: row;
+  color: var(--cyan);
+  font-weight: 400;
+}
+
+.card-balance > img {
+  margin: auto;
+  padding: 0 0.2em 0 0;
+}
+
+.card-time-left {
+  display: flex;
+  flex-direction: row;
+  color: var(--soft-blue);
+}
+
+.card-time-left > img {
+  margin: auto;
+  padding: 0 6px 0 0;
+}
+
+hr.card-separator {
+  color: hsl(215, 32%, 27%);
+  width: 100%;
+}
+
+.card-creator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--soft-blue);
+}
+
+.card-creator > img {
+  height: 1.75em;
+  border: 1px solid white;
+  border-radius: 1em;
+}
+
+.card-creator-name {
+  padding: 0 0 0 1em;
+}
+
+.creator-name {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+
+.creator-name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
